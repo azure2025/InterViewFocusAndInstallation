@@ -21,6 +21,19 @@ Setup Kubernetes (K8s) Cluster on AWS
  	sudo wget https://github.com/kubernetes/kops/releases/download/1.10.0/kops-linux-amd64
  	sudo chmod +x kops-linux-amd64
  	sudo mv kops-linux-amd64 /usr/local/bin/kops
+	
+###REDHAT KOPS
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+sudo dnf upgrade
+
+sudo subscription-manager repos --enable "rhel-*-optional-rpms" --enable "rhel-*-extras-rpms"
+sudo yum update
+
+sudo yum install snapd
+
+sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
+sudo snap install kops
  
 4) Install kubectl
 
