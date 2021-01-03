@@ -17,6 +17,14 @@ http://mithuntechnologies.com/devops/DevOpsToolsMithunTechnologies.html
       
               ######## Anath Coach
  https://www.coachdevops.com/2020/06/deploy-python-app-into-kubernetes.html
+ 
+                            INSTALL KUBECTL
+ Install kubectl
+
+ sudo curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+
+ sudo chmod +x ./kubectl
+ sudo mv ./kubectl /usr/local/bin/kubectl
                                                                                        
                            ####DOCKER INSTALLATION REDHAT8
 dnf update -y ; reboot
