@@ -102,6 +102,8 @@ kubectl get pods --all-namespaces
 # Get token
 
 kubeadm token create --print-join-command
+kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=32.xxx.xx.xxx(PublicIP)
+
 kubectl get secret --namespace monitoring grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
 
 =========In Master Node End====================
